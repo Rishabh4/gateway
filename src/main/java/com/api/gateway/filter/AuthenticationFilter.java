@@ -40,21 +40,7 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
 	}
 
 	public static class Config {
-        private String role;
-
-		public String getRole() {
-			return role;
-		}
-
-		public void setRole(String role) {
-			this.role = role;
-		}
 	}
-	
-    @Override
-    public List<String> shortcutFieldOrder() {
-        return Arrays.asList("role");
-    }
 
 	@Override
 	public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
